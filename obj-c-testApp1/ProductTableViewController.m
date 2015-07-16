@@ -1,23 +1,21 @@
 //
-//  TableViewController.m
+//  ProductTableViewController.m
 //  obj-c-testApp1
 //
 //  Created by Mateusz Florczak on 16/07/15.
 //  Copyright (c) 2015 Kainos Software Ltd. All rights reserved.
 //
 
-#import "TableViewController.h"
+#import "ProductTableViewController.h"
 #import "DetailViewController.h"
-#import "CustomViewCell.h"
 #import "Item.h"
 #import "Repository.h"
-#import "ProductTableViewController.h"
 
-@interface TableViewController ()
+@interface ProductTableViewController ()
 
 @end
 
-@implementation TableViewController
+@implementation ProductTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -37,30 +35,29 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return [Repository getAll].count;
+    return 2;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *cellIdentifier = @"CustomViewCell";
-    CustomViewCell *cell = (CustomViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    NSString *cellIdentifier = @"productCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-        //cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CustomViewCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    Item *selectedItem = [Item alloc];
-    selectedItem = [[Repository getAll] objectAtIndex:indexPath.row];
-    
-    cell.myTitle.text = selectedItem.title;
-    cell.myDescription.text = selectedItem.description;
+    if(indexPath.row == 0) {
+        cell.textLabel.text = @"Product Page";
+    } else {
+        cell.textLabel.text = @"Product Localisation";
+    }
     
     return cell;
 }
@@ -105,22 +102,32 @@
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    ProductTableViewController *viewController = [[ProductTableViewController alloc] initWithNibName:@"ProductTableViewController" bundle:nil];
+    UIViewController *viewController = [UIViewController alloc];
     
-    Item *selectedItem = [[Repository getAll] objectAtIndex:indexPath.row];
-    viewController.url = selectedItem.url;
-    viewController.mapLat = selectedItem.mapLat;
-    viewController.mapLon = selectedItem.mapLon;
-
+    if (indexPath.row == 0) {
+        viewController = [self webViewPage:indexPath];
+    } else {
+        viewController = [self mapPage:indexPath];
+    }
+    
     [self.navigationController pushViewController:viewController animated:YES];
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 75;
+- (UIViewController *)webViewPage:(NSIndexPath *)indexPath {
+    DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    
+    detailViewController.url = self.url;
+    
+    return detailViewController;
 }
 
+- (UIViewController *)mapPage:(NSIndexPath *)indexPath {
+    DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    
+    detailViewController.url = self.url;
+    
+    return detailViewController;
+}
 
 /*
 #pragma mark - Navigation
