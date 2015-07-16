@@ -9,6 +9,7 @@
 #import "ProductTableViewController.h"
 #import "DetailViewController.h"
 #import "Item.h"
+#import "MapViewController.h"
 #import "Repository.h"
 
 @interface ProductTableViewController ()
@@ -122,11 +123,12 @@
 }
 
 - (UIViewController *)mapPage:(NSIndexPath *)indexPath {
-    DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    MapViewController *mapViewController = [[MapViewController alloc] initWithNibName:@"MapViewController" bundle:nil];
     
-    detailViewController.url = self.url;
+    mapViewController.mapLat = self.mapLat;
+    mapViewController.mapLon = self.mapLon;
     
-    return detailViewController;
+    return mapViewController;
 }
 
 /*
