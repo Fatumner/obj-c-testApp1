@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49216D8F1B57CD350061BF6D /* CustomViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49216D8E1B57CD350061BF6D /* CustomViewCell.xib */; };
+		49216D921B57CD820061BF6D /* CustomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49216D911B57CD820061BF6D /* CustomViewCell.m */; };
 		49ADFEA41B57B3A700E5BD60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ADFEA31B57B3A700E5BD60 /* main.m */; };
 		49ADFEA71B57B3A700E5BD60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ADFEA61B57B3A700E5BD60 /* AppDelegate.m */; };
 		49ADFEAF1B57B3A700E5BD60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49ADFEAE1B57B3A700E5BD60 /* Images.xcassets */; };
@@ -15,6 +17,10 @@
 		9C8530A81B57B81900ADDCBF /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8530A71B57B81900ADDCBF /* Item.m */; };
 		9C8530AB1B57B83000ADDCBF /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8530AA1B57B83000ADDCBF /* Repository.m */; };
 		9C8530B21B57C75400ADDCBF /* DataRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8530B11B57C75400ADDCBF /* DataRequester.m */; };
+		49ADFECA1B57B6B100E5BD60 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ADFEC81B57B6B100E5BD60 /* TableViewController.m */; };
+		49ADFECB1B57B6B100E5BD60 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49ADFEC91B57B6B100E5BD60 /* TableViewController.xib */; };
+		49ADFECF1B57BA2D00E5BD60 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ADFECD1B57BA2D00E5BD60 /* DetailViewController.m */; };
+		49ADFED01B57BA2D00E5BD60 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49ADFECE1B57BA2D00E5BD60 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49216D8E1B57CD350061BF6D /* CustomViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomViewCell.xib; sourceTree = "<group>"; };
+		49216D901B57CD820061BF6D /* CustomViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewCell.h; sourceTree = "<group>"; };
+		49216D911B57CD820061BF6D /* CustomViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewCell.m; sourceTree = "<group>"; };
 		49ADFE9E1B57B3A700E5BD60 /* obj-c-testApp1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "obj-c-testApp1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49ADFEA21B57B3A700E5BD60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49ADFEA31B57B3A700E5BD60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,6 +53,12 @@
 		9C8530AA1B57B83000ADDCBF /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
 		9C8530B01B57C75400ADDCBF /* DataRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequester.h; sourceTree = "<group>"; };
 		9C8530B11B57C75400ADDCBF /* DataRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataRequester.m; sourceTree = "<group>"; };
+		49ADFEC71B57B6B100E5BD60 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		49ADFEC81B57B6B100E5BD60 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		49ADFEC91B57B6B100E5BD60 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		49ADFECC1B57BA2D00E5BD60 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		49ADFECD1B57BA2D00E5BD60 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		49ADFECE1B57BA2D00E5BD60 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +107,15 @@
 				9C8530A41B57B70C00ADDCBF /* Models */,
 				9C8530A51B57B79B00ADDCBF /* Repositories */,
 				49ADFEA11B57B3A700E5BD60 /* Supporting Files */,
+				49ADFEC71B57B6B100E5BD60 /* TableViewController.h */,
+				49ADFEC81B57B6B100E5BD60 /* TableViewController.m */,
+				49ADFEC91B57B6B100E5BD60 /* TableViewController.xib */,
+				49ADFECC1B57BA2D00E5BD60 /* DetailViewController.h */,
+				49ADFECD1B57BA2D00E5BD60 /* DetailViewController.m */,
+				49ADFECE1B57BA2D00E5BD60 /* DetailViewController.xib */,
+				49216D901B57CD820061BF6D /* CustomViewCell.h */,
+				49216D911B57CD820061BF6D /* CustomViewCell.m */,
+				49216D8E1B57CD350061BF6D /* CustomViewCell.xib */,
 			);
 			path = "obj-c-testApp1";
 			sourceTree = "<group>";
@@ -230,8 +254,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49ADFECB1B57B6B100E5BD60 /* TableViewController.xib in Resources */,
 				49ADFEB21B57B3A700E5BD60 /* LaunchScreen.xib in Resources */,
 				49ADFEAF1B57B3A700E5BD60 /* Images.xcassets in Resources */,
+				49ADFED01B57BA2D00E5BD60 /* DetailViewController.xib in Resources */,
+				49216D8F1B57CD350061BF6D /* CustomViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,10 +277,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C8530A81B57B81900ADDCBF /* Item.m in Sources */,
+				49216D921B57CD820061BF6D /* CustomViewCell.m in Sources */,
 				49ADFEA71B57B3A700E5BD60 /* AppDelegate.m in Sources */,
+				49ADFECA1B57B6B100E5BD60 /* TableViewController.m in Sources */,
 				49ADFEA41B57B3A700E5BD60 /* main.m in Sources */,
 				9C8530B21B57C75400ADDCBF /* DataRequester.m in Sources */,
 				9C8530AB1B57B83000ADDCBF /* Repository.m in Sources */,
+				49ADFECF1B57BA2D00E5BD60 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

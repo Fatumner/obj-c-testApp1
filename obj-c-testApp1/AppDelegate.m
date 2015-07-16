@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Item.h"
 #import "Repository.h"
+#import "TableViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,16 @@
     // Override point for customization after application launch.
     
     [Repository buildFrom:@"http://olx.pl/i2/ads/?json=1"];
+    
+    UITableViewController *tableViewController = [[TableViewController alloc] initWithNibName:@"TableViewController" bundle:nil];
+    tableViewController.view.backgroundColor = [UIColor lightGrayColor];
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:tableViewController];
+    
+    self.window = [[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = navigationController;
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
