@@ -14,6 +14,8 @@
 		49ADFEBE1B57B3A700E5BD60 /* obj_c_testApp1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ADFEBD1B57B3A700E5BD60 /* obj_c_testApp1Tests.m */; };
 		49ADFECA1B57B6B100E5BD60 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ADFEC81B57B6B100E5BD60 /* TableViewController.m */; };
 		49ADFECB1B57B6B100E5BD60 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49ADFEC91B57B6B100E5BD60 /* TableViewController.xib */; };
+		49ADFECF1B57BA2D00E5BD60 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ADFECD1B57BA2D00E5BD60 /* DetailViewController.m */; };
+		49ADFED01B57BA2D00E5BD60 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49ADFECE1B57BA2D00E5BD60 /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		49ADFEC71B57B6B100E5BD60 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
 		49ADFEC81B57B6B100E5BD60 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 		49ADFEC91B57B6B100E5BD60 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		49ADFECC1B57BA2D00E5BD60 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		49ADFECD1B57BA2D00E5BD60 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		49ADFECE1B57BA2D00E5BD60 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,9 @@
 				49ADFEC71B57B6B100E5BD60 /* TableViewController.h */,
 				49ADFEC81B57B6B100E5BD60 /* TableViewController.m */,
 				49ADFEC91B57B6B100E5BD60 /* TableViewController.xib */,
+				49ADFECC1B57BA2D00E5BD60 /* DetailViewController.h */,
+				49ADFECD1B57BA2D00E5BD60 /* DetailViewController.m */,
+				49ADFECE1B57BA2D00E5BD60 /* DetailViewController.xib */,
 			);
 			path = "obj-c-testApp1";
 			sourceTree = "<group>";
@@ -202,6 +210,7 @@
 				49ADFECB1B57B6B100E5BD60 /* TableViewController.xib in Resources */,
 				49ADFEB21B57B3A700E5BD60 /* LaunchScreen.xib in Resources */,
 				49ADFEAF1B57B3A700E5BD60 /* Images.xcassets in Resources */,
+				49ADFED01B57BA2D00E5BD60 /* DetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,6 +231,7 @@
 				49ADFEA71B57B3A700E5BD60 /* AppDelegate.m in Sources */,
 				49ADFECA1B57B6B100E5BD60 /* TableViewController.m in Sources */,
 				49ADFEA41B57B3A700E5BD60 /* main.m in Sources */,
+				49ADFECF1B57BA2D00E5BD60 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
