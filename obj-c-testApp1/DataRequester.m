@@ -10,4 +10,11 @@
 
 @implementation DataRequester
 
++ (NSArray *)makeRequestFromString:(NSString *)urlString {
+    NSURL *url = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    
+    return [NSJSONSerialization JSONObjectWithData:request.HTTPBody options:0 error:nil];
+}
+
 @end

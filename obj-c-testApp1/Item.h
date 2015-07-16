@@ -17,6 +17,6 @@
 @property (nonatomic, strong) NSNumber *mapLon;
 @property (nonatomic, strong) NSNumber *mapLat;
 
-- (instancetype)initWithJSONString:(NSString *)JSONString;
+- (instancetype)initWithJSONArray:(NSArray *)JSONArray;
 
 @end

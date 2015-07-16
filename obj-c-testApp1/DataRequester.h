@@ -10,6 +10,6 @@
 
 @interface DataRequester : NSObject
 
-+ 
++ (NSArray *)makeRequestFromString:(NSString *)urlString;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "Repository.h"
+#import "DataRequester.h"
 
 @implementation Repository
 
@@ -14,9 +15,10 @@ static NSMutableArray *allItems;
 
 + (void)buildFrom:(NSString *)urlString {
     
-    NSError *parseError = nil;
-    NSData *JSONData = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
-    NSArray *JSONArray = [NSJSONSerialization JSONObjectWithData:JSONData options:0 error:&parseError];
+    NSArray *JSONArray = [DataRequester makeRequestFromString:urlString];
+    JSONArray = [JSONArray mutableArrayValueForKey:@"ads"];
+    
+    [allItems addObject:[[Item alloc] initWithJSONArray:JSONArray[0]]];
 }
 
 @end

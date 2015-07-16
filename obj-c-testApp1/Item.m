@@ -10,18 +10,18 @@
 
 @implementation Item
 
-- (instancetype)initWithJSONString:(NSString *)JSONString {
+- (instancetype)initWithJSONArray:(NSArray *)JSONArray {
     self = [super init];
     
-    NSError *parseError = nil;
-    NSData *JSONData = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
-    NSArray *JSONArray = [NSJSONSerialization JSONObjectWithData:JSONData options:0 error:&parseError];
-    JSONArray = [JSONArray mutableArrayValueForKey:@"ads"][0];
+    //NSError *parseError = nil;
+    //NSData *JSONData = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
+    //NSArray *JSONArray = [NSJSONSerialization JSONObjectWithData:JSONData options:0 error:&parseError];
+    //JSONArray = [JSONArray mutableArrayValueForKey:@"ads"][0];
     
     NSNumberFormatter *decimalFormater = [[NSNumberFormatter alloc] init];
     decimalFormater.numberStyle = NSNumberFormatterDecimalStyle;
     
-    if (!parseError && JSONArray) {
+    if (JSONArray) {
         self.id = [decimalFormater numberFromString:[JSONArray valueForKey:@"id"]];
         self.title = [JSONArray valueForKey:@"title"];
         self.desc = [JSONArray valueForKey:@"description"];
