@@ -12,6 +12,8 @@
 		49ADFEAF1B57B3A700E5BD60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49ADFEAE1B57B3A700E5BD60 /* Images.xcassets */; };
 		49ADFEB21B57B3A700E5BD60 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49ADFEB01B57B3A700E5BD60 /* LaunchScreen.xib */; };
 		49ADFEBE1B57B3A700E5BD60 /* obj_c_testApp1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ADFEBD1B57B3A700E5BD60 /* obj_c_testApp1Tests.m */; };
+		49ADFECA1B57B6B100E5BD60 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ADFEC81B57B6B100E5BD60 /* TableViewController.m */; };
+		49ADFECB1B57B6B100E5BD60 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49ADFEC91B57B6B100E5BD60 /* TableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,9 @@
 		49ADFEB71B57B3A700E5BD60 /* obj-c-testApp1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "obj-c-testApp1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49ADFEBC1B57B3A700E5BD60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49ADFEBD1B57B3A700E5BD60 /* obj_c_testApp1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = obj_c_testApp1Tests.m; sourceTree = "<group>"; };
+		49ADFEC71B57B6B100E5BD60 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		49ADFEC81B57B6B100E5BD60 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		49ADFEC91B57B6B100E5BD60 /* TableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,9 @@
 				49ADFEAE1B57B3A700E5BD60 /* Images.xcassets */,
 				49ADFEB01B57B3A700E5BD60 /* LaunchScreen.xib */,
 				49ADFEA11B57B3A700E5BD60 /* Supporting Files */,
+				49ADFEC71B57B6B100E5BD60 /* TableViewController.h */,
+				49ADFEC81B57B6B100E5BD60 /* TableViewController.m */,
+				49ADFEC91B57B6B100E5BD60 /* TableViewController.xib */,
 			);
 			path = "obj-c-testApp1";
 			sourceTree = "<group>";
@@ -191,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49ADFECB1B57B6B100E5BD60 /* TableViewController.xib in Resources */,
 				49ADFEB21B57B3A700E5BD60 /* LaunchScreen.xib in Resources */,
 				49ADFEAF1B57B3A700E5BD60 /* Images.xcassets in Resources */,
 			);
@@ -211,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49ADFEA71B57B3A700E5BD60 /* AppDelegate.m in Sources */,
+				49ADFECA1B57B6B100E5BD60 /* TableViewController.m in Sources */,
 				49ADFEA41B57B3A700E5BD60 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
