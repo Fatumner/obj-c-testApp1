@@ -26,6 +26,12 @@
     MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(location, 2000, 2000);
     
     [self.mapView setRegion:region];
+    
+    MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+    [annotation setCoordinate:location];
+    NSString *annotationTitle = [[NSString alloc] initWithFormat:@"Product Location: long %.0lf, lat %lf", longtitude, latitude];
+    [annotation setTitle:annotationTitle];
+    [self.mapView addAnnotation:annotation];
 }
 
 - (void)didReceiveMemoryWarning {
