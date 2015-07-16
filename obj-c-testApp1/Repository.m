@@ -14,7 +14,6 @@
 static NSMutableArray *allItems;
 
 + (void)buildFrom:(NSString *)urlString {
-    
     if (allItems == nil) {
         allItems = [[NSMutableArray alloc] init];
     }
@@ -37,6 +36,7 @@ static NSMutableArray *allItems;
             return item;
         }
     }
+    
     return nil;
 }
 

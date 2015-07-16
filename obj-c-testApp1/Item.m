@@ -12,12 +12,7 @@
 
 - (instancetype)initWithJSONArray:(NSArray *)JSONArray {
     self = [super init];
-    
-    //NSError *parseError = nil;
-    //NSData *JSONData = [JSONString dataUsingEncoding:NSUTF8StringEncoding];
-    //NSArray *JSONArray = [NSJSONSerialization JSONObjectWithData:JSONData options:0 error:&parseError];
-    //JSONArray = [JSONArray mutableArrayValueForKey:@"ads"][0];
-    
+
     NSNumberFormatter *decimalFormater = [[NSNumberFormatter alloc] init];
     decimalFormater.numberStyle = NSNumberFormatterDecimalStyle;
     

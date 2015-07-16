@@ -20,8 +20,9 @@
     
     NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
     
-    if([responseCode statusCode] != 200){
+    if ([responseCode statusCode] != 200) {
         NSLog(@"Error getting %@, HTTP status code %li", url, [responseCode statusCode]);
+        
         return nil;
     }
     
