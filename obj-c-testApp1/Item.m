@@ -33,4 +33,8 @@
     return self;
 }
 
+- (NSString *)description {
+    return [NSString stringWithFormat:@"Id: %@, title: %@, description: %@, url: %@, map_lon: %@, map_lat: %@", self.id, self.title, self.desc, self.url, self.mapLon, self.mapLat];
+}
+
 @end

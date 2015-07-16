@@ -12,9 +12,20 @@
 
 + (NSArray *)makeRequestFromString:(NSString *)urlString {
     NSURL *url = [NSURL URLWithString:urlString];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    [request setHTTPMethod:@"GET"];
     
-    return [NSJSONSerialization JSONObjectWithData:request.HTTPBody options:0 error:nil];
+    NSError *error = [[NSError alloc] init];
+    NSHTTPURLResponse *responseCode = nil;
+    
+    NSData *oResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&responseCode error:&error];
+    
+    if([responseCode statusCode] != 200){
+        NSLog(@"Error getting %@, HTTP status code %li", url, [responseCode statusCode]);
+        return nil;
+    }
+    
+    return [NSJSONSerialization JSONObjectWithData:oResponseData options:0 error:nil];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Item.h"
+#import "Repository.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    NSString *testString = @"{   \"a\":0,   \"ads\":[{           \"id\":\"159012553\",         \"url\":\"http:\/\/olx.pl\/oferta\/leba-mieszkanie-dwupokojowe-z-lazienka-i-kuchnia-CID3-IDaLcqB.html\",         \"preview_url\":\"http:\/\/olx.pl\/i2\/oferta\/leba-mieszkanie-dwupokojowe-z-lazienka-i-kuchnia-CID3-IDaLcqB.html?json=1\",         \"title\":\"Łeba - Mieszkanie dwupokojowe z łazienką i kuchnią\",         \"created\":\"10  lip\",         \"age\":12,         \"description\":\"Mieszkanie znajduje się na posesji prywatnej, do dyspozycji dwa pokoje 3 osobowe z możliwością dostawki, kuchnia w pełni wyposażona oraz łazienka, naziemna telewizja cyfrowa. Możliwość grillowania i parkowania samochodu na posesji. Cena sześć osób od 140 do 260 zł w zależności od terminu pobytu. Odległość od plaży - około 1500 m.\",         \"highlighted\":1,         \"urgent\":0,         \"topAd\":1,         \"category_id\":1289,         \"params\":[  ],         \"subtitle\":[  ],         \"business\":0,         \"hide_user_ads_button\":0,         \"status\":\"active\",         \"header\":\"Wyróżnione ogłoszenia\",         \"header_type\":\"promoted\",         \"has_phone\":1,         \"has_email\":1,         \"map_zoom\":\"18\",         \"map_lat\":\"54.75121348\",         \"map_lon\":\"17.56014909\",         \"map_radius\":0,         \"map_show_detailed\":true,         \"city_label\":\"Łeba\",         \"person\":\"Michał\",         \"user_label\":\"Michał\",         \"user_ads_id\":\"27Fij\",         \"user_id\":\"27Fij\",         \"numeric_user_id\":\"31379707\",         \"user_ads_url\":\"http:\/\/olx.pl\/i2\/oferty\/user\/27Fij\/?json=1&search%5Buser_id%5D=31379707\",         \"list_label\":\"200 zł\",         \"list_label_ad\":\"200 zł\",         \"list_label_small\":\"Do negocjacji\",         \"photos\":[  ],         \"photos_sizes\":[  ],         \"chat_options\":1      }]}";
-    
-    Item *test = [[Item alloc] initWithJSONString:testString];
+    [Repository buildFrom:@"http://olx.pl/i2/ads/?json=1"];
     
     return YES;
 }
