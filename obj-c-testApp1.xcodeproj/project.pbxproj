@@ -12,6 +12,9 @@
 		49ADFEAF1B57B3A700E5BD60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49ADFEAE1B57B3A700E5BD60 /* Images.xcassets */; };
 		49ADFEB21B57B3A700E5BD60 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49ADFEB01B57B3A700E5BD60 /* LaunchScreen.xib */; };
 		49ADFEBE1B57B3A700E5BD60 /* obj_c_testApp1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ADFEBD1B57B3A700E5BD60 /* obj_c_testApp1Tests.m */; };
+		9C8530A81B57B81900ADDCBF /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8530A71B57B81900ADDCBF /* Item.m */; };
+		9C8530AB1B57B83000ADDCBF /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8530AA1B57B83000ADDCBF /* Repository.m */; };
+		9C8530B21B57C75400ADDCBF /* DataRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C8530B11B57C75400ADDCBF /* DataRequester.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,12 @@
 		49ADFEB71B57B3A700E5BD60 /* obj-c-testApp1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "obj-c-testApp1Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49ADFEBC1B57B3A700E5BD60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49ADFEBD1B57B3A700E5BD60 /* obj_c_testApp1Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = obj_c_testApp1Tests.m; sourceTree = "<group>"; };
+		9C8530A61B57B81900ADDCBF /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		9C8530A71B57B81900ADDCBF /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		9C8530A91B57B83000ADDCBF /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
+		9C8530AA1B57B83000ADDCBF /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
+		9C8530B01B57C75400ADDCBF /* DataRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequester.h; sourceTree = "<group>"; };
+		9C8530B11B57C75400ADDCBF /* DataRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataRequester.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +89,8 @@
 				49ADFEA61B57B3A700E5BD60 /* AppDelegate.m */,
 				49ADFEAE1B57B3A700E5BD60 /* Images.xcassets */,
 				49ADFEB01B57B3A700E5BD60 /* LaunchScreen.xib */,
+				9C8530A41B57B70C00ADDCBF /* Models */,
+				9C8530A51B57B79B00ADDCBF /* Repositories */,
 				49ADFEA11B57B3A700E5BD60 /* Supporting Files */,
 			);
 			path = "obj-c-testApp1";
@@ -109,6 +120,34 @@
 				49ADFEBC1B57B3A700E5BD60 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C8530A41B57B70C00ADDCBF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9C8530A61B57B81900ADDCBF /* Item.h */,
+				9C8530A71B57B81900ADDCBF /* Item.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9C8530A51B57B79B00ADDCBF /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				9C8530A91B57B83000ADDCBF /* Repository.h */,
+				9C8530AA1B57B83000ADDCBF /* Repository.m */,
+				9C8530AF1B57C70F00ADDCBF /* Utils */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
+		9C8530AF1B57C70F00ADDCBF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9C8530B01B57C75400ADDCBF /* DataRequester.h */,
+				9C8530B11B57C75400ADDCBF /* DataRequester.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,8 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C8530A81B57B81900ADDCBF /* Item.m in Sources */,
 				49ADFEA71B57B3A700E5BD60 /* AppDelegate.m in Sources */,
 				49ADFEA41B57B3A700E5BD60 /* main.m in Sources */,
+				9C8530B21B57C75400ADDCBF /* DataRequester.m in Sources */,
+				9C8530AB1B57B83000ADDCBF /* Repository.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
