@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49216D8F1B57CD350061BF6D /* CustomViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49216D8E1B57CD350061BF6D /* CustomViewCell.xib */; };
+		49216D921B57CD820061BF6D /* CustomViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 49216D911B57CD820061BF6D /* CustomViewCell.m */; };
 		49ADFEA41B57B3A700E5BD60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ADFEA31B57B3A700E5BD60 /* main.m */; };
 		49ADFEA71B57B3A700E5BD60 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49ADFEA61B57B3A700E5BD60 /* AppDelegate.m */; };
 		49ADFEAF1B57B3A700E5BD60 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49ADFEAE1B57B3A700E5BD60 /* Images.xcassets */; };
@@ -29,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49216D8E1B57CD350061BF6D /* CustomViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomViewCell.xib; sourceTree = "<group>"; };
+		49216D901B57CD820061BF6D /* CustomViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewCell.h; sourceTree = "<group>"; };
+		49216D911B57CD820061BF6D /* CustomViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewCell.m; sourceTree = "<group>"; };
 		49ADFE9E1B57B3A700E5BD60 /* obj-c-testApp1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "obj-c-testApp1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49ADFEA21B57B3A700E5BD60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49ADFEA31B57B3A700E5BD60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -97,6 +102,9 @@
 				49ADFECC1B57BA2D00E5BD60 /* DetailViewController.h */,
 				49ADFECD1B57BA2D00E5BD60 /* DetailViewController.m */,
 				49ADFECE1B57BA2D00E5BD60 /* DetailViewController.xib */,
+				49216D901B57CD820061BF6D /* CustomViewCell.h */,
+				49216D911B57CD820061BF6D /* CustomViewCell.m */,
+				49216D8E1B57CD350061BF6D /* CustomViewCell.xib */,
 			);
 			path = "obj-c-testApp1";
 			sourceTree = "<group>";
@@ -211,6 +219,7 @@
 				49ADFEB21B57B3A700E5BD60 /* LaunchScreen.xib in Resources */,
 				49ADFEAF1B57B3A700E5BD60 /* Images.xcassets in Resources */,
 				49ADFED01B57BA2D00E5BD60 /* DetailViewController.xib in Resources */,
+				49216D8F1B57CD350061BF6D /* CustomViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49216D921B57CD820061BF6D /* CustomViewCell.m in Sources */,
 				49ADFEA71B57B3A700E5BD60 /* AppDelegate.m in Sources */,
 				49ADFECA1B57B6B100E5BD60 /* TableViewController.m in Sources */,
 				49ADFEA41B57B3A700E5BD60 /* main.m in Sources */,

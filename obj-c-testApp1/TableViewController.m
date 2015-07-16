@@ -8,6 +8,7 @@
 
 #import "TableViewController.h"
 #import "DetailViewController.h"
+#import "CustomViewCell.h"
 
 @interface TableViewController ()
 
@@ -44,14 +45,17 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *cellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    static NSString *cellIdentifier = @"CustomViewCell";
+    CustomViewCell *cell = (CustomViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        //cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CustomViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
     
-    cell.textLabel.text = @"test";
+    cell.myTitle.text = @"My title";
+    cell.myDescription.text = @"Some imaginary description";
     
     return cell;
 }
@@ -103,6 +107,10 @@
     detailViewController.url = [NSURL URLWithString:@"http://olx.pl/oferta/wyprawka-dla-noworodka-do-szpitala-gotowa-kompletny-zestaw-dla-mamy-CID88-IDaqDvD.html"];
 
     [self.navigationController pushViewController:detailViewController animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 75;
 }
 
 
