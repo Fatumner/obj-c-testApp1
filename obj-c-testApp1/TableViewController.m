@@ -9,6 +9,8 @@
 #import "TableViewController.h"
 #import "DetailViewController.h"
 #import "CustomViewCell.h"
+#import "Item.h"
+#import "Repository.h"
 
 @interface TableViewController ()
 
@@ -38,9 +40,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 1;
+
+    return [Repository getAll].count;
 }
 
 
@@ -54,8 +55,11 @@
         cell = [nib objectAtIndex:0];
     }
     
-    cell.myTitle.text = @"My title";
-    cell.myDescription.text = @"Some imaginary description";
+    Item *selectedItem = [Item alloc];
+    selectedItem = [[Repository getAll] objectAtIndex:indexPath.row];
+    
+    cell.myTitle.text = selectedItem.title;
+    cell.myDescription.text = selectedItem.description;
     
     return cell;
 }
@@ -104,7 +108,10 @@
     // Create the next view controller.
     DetailViewController *detailViewController = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
     
-    detailViewController.url = [NSURL URLWithString:@"http://olx.pl/oferta/wyprawka-dla-noworodka-do-szpitala-gotowa-kompletny-zestaw-dla-mamy-CID88-IDaqDvD.html"];
+    Item *selectedItem = [Item alloc];
+    selectedItem = [[Repository getAll] objectAtIndex:indexPath.row];
+    
+    detailViewController.url = selectedItem.url;
 
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
